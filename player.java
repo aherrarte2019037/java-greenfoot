@@ -14,6 +14,17 @@ public class player extends Actor
      */
     public void act()
     {
-        // Add your action code here.
+        if (getX()>730) setLocation(730, getY());
+        if (getX()<54) setLocation(54, getY());
+        
+        if (Greenfoot.isKeyDown("left"))
+        {
+            move(-4);
+        }
+        
+        if (Greenfoot.isKeyDown("right"))
+        {
+            move(4);
+        }
     }
 }
