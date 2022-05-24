@@ -16,7 +16,7 @@ public class MyWorld extends World
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(768, 768, 1);
+        super(768, 600, 1);
 
         prepare();
     }
@@ -27,6 +27,7 @@ public class MyWorld extends World
      */
     private void prepare()
     {
-
+        player player = new player();
+        addObject(player,394,550);
     }
 }
