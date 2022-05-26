@@ -19,6 +19,7 @@ public class MyWorld extends World
         super(768, 600, 1);
 
         prepare();
+        generarNormalAliens(5);//Prueba para mientras
     }
     
     /**
@@ -30,4 +31,16 @@ public class MyWorld extends World
         player player = new player();
         addObject(player,394,550);
     }
-}
+    
+    private void generarNormalAliens(int numero) //Funcion que genera los aliens
+    {
+        for (int i=0;i<numero;i++){
+            normalAlien nA=new normalAlien();
+            int x=Greenfoot.getRandomNumber(getWidth());
+            int y=Greenfoot.getRandomNumber(250);
+            addObject(nA,x,y);
+	}
+    }
+    
+}   
+
