@@ -17,14 +17,14 @@ public class Menu extends World
     public Menu()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1); 
+        super(768, 600, 1); 
         prepararMundo();
     }
     
     private void prepararMundo(){
-        addObject(new playB(), 300,160);
-        addObject(new exitB(), 300,230);
-        addObject(flecha,205,187);
+        addObject(new playB(), 200,80);
+        addObject(new exitB(), 150,115);
+        addObject(flecha,200,200);
         
     }
     
@@ -35,7 +35,7 @@ public class Menu extends World
         if (opcion>=2) opcion=0;
         if (opcion<=2) opcion=1;
         
-        flecha.setLocation(205,187+(opcion*100));
+        flecha.setLocation(400,250+(opcion*200));
         
         if (Greenfoot.isKeyDown("SPACE") || Greenfoot.isKeyDown("ENTER")){
             switch(opcion){
