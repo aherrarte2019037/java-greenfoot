@@ -22,20 +22,26 @@ public class Menu extends World
     }
     
     private void prepararMundo(){
-        addObject(new playB(), 200,80);
-        addObject(new exitB(), 150,115);
-        addObject(flecha,200,200);
+        addObject(new playB(),380,225);
+        addObject(new exitB(),380,350);
+        addObject(flecha,250,220);
         
     }
     
     public void act(){
-        if (Greenfoot.isKeyDown("UP") &  opcion!=0) {opcion++;}
-        if (Greenfoot.isKeyDown("DOWN") &  opcion!=1) {opcion--;}
+        if (Greenfoot.isKeyDown("up") &&  opcion!=0) 
+        {
+            opcion++;
+        }
+        if (Greenfoot.isKeyDown("down") &&  opcion!=1) 
+        {
+            opcion--;
+        }
         
         if (opcion>=2) opcion=0;
-        if (opcion<=2) opcion=1;
+        if (opcion<0) opcion=1;
         
-        flecha.setLocation(400,250+(opcion*200));
+        flecha.setLocation(250,220+(opcion*130));
         
         if (Greenfoot.isKeyDown("SPACE") || Greenfoot.isKeyDown("ENTER")){
             switch(opcion){
