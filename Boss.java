@@ -1,24 +1,19 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class normalAlien here.
+ * Write a description of class Boss here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class normalAlien extends Enemys
+public class Boss extends Enemys
 {
     /**
-     * Act - do whatever the normalAlien wants to do. This method is called whenever
+     * Act - do whatever the Boss wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    
-    public void posicionInicial()
-    {
-        //setRotation(60);
-    }
     public void act()
     {
-        moveEnemy();
+        // Add your action code here.
     }
 }
