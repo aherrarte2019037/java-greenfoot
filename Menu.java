@@ -22,9 +22,10 @@ public class Menu extends World
     }
     
     private void prepararMundo(){
-        addObject(new playB(),380,225);
-        addObject(new exitB(),380,350);
-        addObject(flecha,250,220);
+        addObject(new playB(),380,440);
+        addObject(new exitB(),380,545);
+        addObject(new title(),380,200);
+        addObject(flecha,240,440);
         
     }
     
@@ -41,7 +42,7 @@ public class Menu extends World
         if (opcion>=2) opcion=0;
         if (opcion<0) opcion=1;
         
-        flecha.setLocation(250,220+(opcion*130));
+        flecha.setLocation(240,440+(opcion*100));
         
         if (Greenfoot.isKeyDown("SPACE") || Greenfoot.isKeyDown("ENTER")){
             switch(opcion){
