@@ -14,6 +14,7 @@ public class player extends Actor
      */
     public void act()
     {
+        setImage("player.png");
         if (getX()>730) setLocation(730, getY());
         if (getX()<54) setLocation(54, getY());
         if (getY()<38) setLocation(getX(), 38);
@@ -21,11 +22,13 @@ public class player extends Actor
         
         if (Greenfoot.isKeyDown("left"))
         {
+            setImage("playerLeft.png");
             move(-4);
         }
         
         if (Greenfoot.isKeyDown("right"))
         {
+            setImage("playerRight.png");
             move(4);
         }
 
