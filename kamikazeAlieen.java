@@ -14,6 +14,14 @@ public class kamikazeAlieen extends Enemys
      */
     public void act()
     {
-        // Add your action code here.
+        setLocation(getX(),getY()+4);
+        
+        World w = getWorld(); //Generar nuevamente
+        if(isAtEdge())
+        {
+            int x= Greenfoot.getRandomNumber(760);
+            //w.removeObject(this); Para remover    
+            setLocation(x,5);
+        }
     }
 }

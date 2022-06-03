@@ -20,5 +20,13 @@ public class normalAlien extends Enemys
     public void act()
     {
         moveEnemy();
+        
+        World w = getWorld(); //Generar nuevamente
+        if(isAtEdge())
+        {
+            int x= Greenfoot.getRandomNumber(768);
+            //w.removeObject(this); Para remover 
+            setLocation(x,10);
+        }
     }
 }

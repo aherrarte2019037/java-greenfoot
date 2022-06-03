@@ -14,6 +14,17 @@ public class ghostAlien extends Enemys
      */
     public void act()
     {
-        // Add your action code here.
+        setLocation(getX(),getY()+1);
+        
+        World w = getWorld(); //Generar nuevamente
+        if(isAtEdge())
+        {
+            int x=Greenfoot.getRandomNumber(760);
+            //int x= Greenfoot.getRandomNumber(getWidth());
+            //w.removeObject(this); Para remover    
+            setLocation(x,5);
+            //setLocation(getX(),getY());
+        }
     }
+    
 }

@@ -14,6 +14,13 @@ public class galloAlien extends Enemys
      */
     public void act()
     {
-        // Add your action code here.
+        moveEnemy();
+        World w = getWorld();
+        if(isAtEdge()) //Generar nuevamente
+        {
+            int x= Greenfoot.getRandomNumber(760);
+            //w.removeObject(this); Para remover    
+            setLocation(x,10);
+        }
     }
 }
