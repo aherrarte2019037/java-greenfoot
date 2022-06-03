@@ -6,13 +6,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class normalAlien extends Enemys
+public class normalAlien extends Shooters
 {
-    /**
-     * Act - do whatever the normalAlien wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    
+    public normalAlien(int HP){
+        super(HP);
+        //this.bullet_angles = bullet_directions(270,0,1,30,1,0);
+    }
     public void posicionInicial()
     {
         //setRotation(60);

@@ -6,12 +6,15 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class player extends Actor
+public class player extends Shooters
 {
-    /**
-     * Act - do whatever the player wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    boolean canFire = true;
+    
+    public player(int HP){
+        super(HP);
+        // More information in Shooters class
+        this.bullet_angles = bullet_directions(90,0,1,30,1,0);
+    }
     public void act()
     {
         setImage("player.png");
@@ -20,27 +23,28 @@ public class player extends Actor
         if (getY()<38) setLocation(getX(), 38);
         if (getY()>550) setLocation(getX(), 550);
         
-        if (Greenfoot.isKeyDown("left"))
+        if (Greenfoot.isKeyDown("a"))
         {
             setImage("playerLeft.png");
             move(-4);
         }
-        
-        if (Greenfoot.isKeyDown("right"))
+        if (Greenfoot.isKeyDown("d"))
         {
             setImage("playerRight.png");
             move(4);
         }
-
-        
-        if (Greenfoot.isKeyDown("up"))
+        if (Greenfoot.isKeyDown("w"))
         {
             setLocation(getX(), getY()-4);
-        }
-        
-        if (Greenfoot.isKeyDown("down"))
+        }        
+        if (Greenfoot.isKeyDown("s"))
         {
             setLocation(getX(), getY()+4);
+        }
+        if (Greenfoot.isKeyDown("space") && canFire == true)
+        {
+            // More information in Shooters class
+            shoot(6, 5, 0, 0, "playerBullet.png");
         }
     }
 }

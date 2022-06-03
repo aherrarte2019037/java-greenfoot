@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Shooters
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Enemys\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=HP
+comment1.target=Shooters(int)
+comment2.params=
+comment2.target=void\ moveEnemy()
+comment3.params=bullet_speed\ bullets_per_second\ spin_rate\ spin_shift\ image
+comment3.target=void\ shoot(int,\ int,\ int,\ int,\ java.lang.String)
+comment4.params=starting_angle\ angle_between_arrays\ num_arrays\ array_angle\ bullets_per_array\ angle_between_bullet
+comment4.target=int[]\ bullet_directions(int,\ int,\ int,\ int,\ int,\ int)
+comment5.params=damage
+comment5.target=void\ receiveDamage(int)
+comment6.params=angle
+comment6.target=void\ rotate(int)
+numComments=7

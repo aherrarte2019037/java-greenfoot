@@ -32,13 +32,13 @@ public class MyWorld extends World
      */
     private void prepare()
     {
-        player player = new player();
+        player player = new player(100);
         addObject(player,394,550);
     }
     
     private void crearNormalAliens(int numero){ //Generar normal Alien
         for(int i=0;i<numero;i++){
-            normalAlien nA=new normalAlien();
+            normalAlien nA=new normalAlien(100);
             int x= Greenfoot.getRandomNumber(getWidth());
             int y=20;
             addObject(nA,x,y);
@@ -47,7 +47,7 @@ public class MyWorld extends World
     
     private void crearKamikazeAlien(int numero){ //generar kamikaze Alien
         for(int i=0;i<numero;i++){
-            kamikazeAlieen kA=new kamikazeAlieen();
+            kamikazeAlieen kA=new kamikazeAlieen(100);
             int x= Greenfoot.getRandomNumber(getWidth());
             int y=5;
             addObject(kA,x,y); 
@@ -56,7 +56,7 @@ public class MyWorld extends World
     
     private void crearInverterAlien(int numero){ //generar inverter Alien
         for(int i=0;i<numero;i++){
-            inverterAlien iA=new inverterAlien();
+            inverterAlien iA=new inverterAlien(100);
             int x= Greenfoot.getRandomNumber(getWidth());
             int y=10;
             addObject(iA,x,y);   
@@ -66,7 +66,7 @@ public class MyWorld extends World
     
     private void crearGhostAlien(int numero){ //generar ghost Alien
         for(int i=0;i<numero;i++){
-            ghostAlien gA=new ghostAlien();
+            ghostAlien gA=new ghostAlien(100);
             int x= Greenfoot.getRandomNumber(getWidth());
             int y=5;
             addObject(gA,x,y); 
@@ -76,7 +76,7 @@ public class MyWorld extends World
     
     private void crearGalloAlien(int numero){ //generar gallo Alien
         for(int i=0;i<numero;i++){
-            galloAlien galloA=new galloAlien();
+            galloAlien galloA=new galloAlien(100);
             int x= Greenfoot.getRandomNumber(getWidth());
             int y=5;
             addObject(galloA,x,y);
