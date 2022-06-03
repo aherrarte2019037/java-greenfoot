@@ -23,6 +23,7 @@ public class MyWorld extends World
         crearKamikazeAlien(3);
         crearInverterAlien(2);
         crearGhostAlien(1);
+        crearGalloAlien(1);
     }
     
     /**

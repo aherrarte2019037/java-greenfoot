@@ -51,7 +51,11 @@ editor.fx.0.x=0
 editor.fx.0.y=0
 height=838
 package.numDependencies=11
+<<<<<<< HEAD
 package.numTargets=16
+=======
+package.numTargets=15
+>>>>>>> 3ba828f6af542fa550f93e6eec2b7b3a60a62faf
 project.charset=UTF-8
 publish.hasSource=false
 publish.locked=true
@@ -181,5 +185,10 @@ target9.y=0
 version=3.0.0
 width=1550
 world.lastInstantiated=Menu
+<<<<<<< HEAD
 xPosition=423
 yPosition=109
+=======
+xPosition=216
+yPosition=95
+>>>>>>> 3ba828f6af542fa550f93e6eec2b7b3a60a62faf
