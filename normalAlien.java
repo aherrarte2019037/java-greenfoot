@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class normalAlien extends Shooters
+public class normalAlien extends enemy
 {
     public normalAlien(int HP){
         super(HP);
