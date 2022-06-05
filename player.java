@@ -64,7 +64,7 @@ public class player extends Shooters
     }
     public void end_game(){
         getWorld().showText("You Loose...", getWorld().getWidth()/2, getWorld().getHeight()/2);
-        getWorld().removeObject(this);
+        setImage("explosion.png");
         Greenfoot.stop();
     }
 }
