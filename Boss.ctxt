@@ -6,4 +6,6 @@ comment1.target=Boss(int,\ player)
 comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Boss\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
 comment2.params=
 comment2.target=void\ act()
-numComments=3
+comment3.params=damage_inflicted
+comment3.target=void\ receiveDamage(int)
+numComments=4

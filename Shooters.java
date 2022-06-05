@@ -45,7 +45,7 @@ public class Shooters extends Actor
             this.bullet_counter = 0;
             // instantiating bullets.
             for(int angle : this.bullet_angles){
-                getWorld().addObject(new Bullet(angle, bullet_speed, image), getX(), getY()); 
+                getWorld().addObject(new enemyBullet(angle, bullet_speed, image), getX(), getY()); 
             }
         }
         // Checking if its time shift angles.

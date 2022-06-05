@@ -12,9 +12,9 @@ public class HPBar extends Actor
      * Act - do whatever the HPBar wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    player main_player;
+    Shooters main_player;
     int MaxHP;
-    public HPBar(player main_player){
+    public HPBar(Shooters main_player){
         this.main_player = main_player;
         this.MaxHP = this.main_player.HP;
         setImage(new GreenfootImage(100,15));

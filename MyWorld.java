@@ -24,7 +24,7 @@ public class MyWorld extends World
         crearNormalAliens(5);
         crearKamikazeAlien(3);
         crearInverterAlien(2);
-        crearGalloAlien(1);
+        crearGalloAlien(2);
     }
     
     private void prepare()
@@ -32,6 +32,14 @@ public class MyWorld extends World
         addObject(player,394,550);
         addObject(playerHP,600,600);
     }
+    
+    public void act(){
+        if (enemies_killed >= 12){
+            stopMusic();
+            Greenfoot.setWorld(new BossLevel());
+        }
+    }
+    
     
     private void crearNormalAliens(int numero){ //Generar normal Alien
         for(int i=0;i<numero;i++){
@@ -85,10 +93,5 @@ public class MyWorld extends World
         GameMusic.stop();
     }
     
-    public void playBossTheme(){
-        GameMusic.stop();
-        GameMusic.setVolume(50);
-        GameMusic.playLoop();
-    }
 }   
 

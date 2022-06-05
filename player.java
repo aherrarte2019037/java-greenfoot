@@ -53,10 +53,18 @@ public class player extends Shooters
         getWorld().addObject(new playerBullet(90, bullet_speed, image), getX(), getY()); 
     }
     public void receiveDamage(int damage_inflicted){
-        Actor bullet = getOneIntersectingObject(enemy.class);
-        if (bullet != null ){
+        Actor enemy = getOneIntersectingObject(enemy.class);
+        Actor bullet = getOneIntersectingObject(enemyBullet.class);
+        if (enemy != null || bullet != null ){
             this.HP -= damage_inflicted;
-            getWorld().removeObject(bullet);
+            try{
+            MyWorld world = (MyWorld) getWorld();
+            world.removeObject(enemy);
+            world.enemies_killed++;
+            }
+            catch(Exception e){
+                end_game();
+            }
         }
         if(this.HP <= 0){
             end_game();

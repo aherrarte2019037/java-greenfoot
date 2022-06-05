@@ -22,7 +22,10 @@ public class enemy extends Shooters
             getWorld().removeObject(bullet);
         }
         if(this.HP <= 0){
-            getWorld().removeObject(this);
+            MyWorld world = (MyWorld) getWorld();
+            getWorld().removeObject(bullet);
+            world.removeObject(this);
+            world.enemies_killed++;
         }
     }
 }
