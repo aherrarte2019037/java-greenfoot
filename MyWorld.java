@@ -8,14 +8,24 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MyWorld extends World
 {
+<<<<<<< HEAD
     int enemies_killed = 0;
     
     
+=======
+    /**
+     * Constructor for objects of class MyWorld.
+     * 
+     */
+    GreenfootSound GameMusic = new GreenfootSound("Quetzal 1 OST - Phase 1.mp3");
+    GreenfootSound BossMusic = new GreenfootSound("Quetzal 1 OST - Boss Theme.mp3");
+>>>>>>> 01ffab0e6249382529c0b2d0a855041e3f535944
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(768, 600, 1);
-
+        GameMusic.setVolume(50);
+        GameMusic.playLoop();
         prepare();
         crearNormalAliens(5);
         crearKamikazeAlien(3);
@@ -79,6 +89,16 @@ public class MyWorld extends World
             addObject(galloA,x,y);
         }
     
+    }
+    
+    public void stopMusic(){
+        GameMusic.stop();
+    }
+    
+    public void playBossTheme(){
+        GameMusic.stop();
+        GameMusic.setVolume(50);
+        GameMusic.playLoop();
     }
 }   
 

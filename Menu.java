@@ -10,6 +10,7 @@ public class Menu extends World
 {
     Flecha flecha=new Flecha();
     private int opcion=0;
+    GreenfootSound TitleMusic = new GreenfootSound("Quetzal 1 OST - Title Theme.mp3");
     /**
      * Constructor for objects of class Menu.
      * 
@@ -28,8 +29,10 @@ public class Menu extends World
         addObject(flecha,240,440);
         
     }
-    
+
     public void act(){
+        TitleMusic.setVolume(50);
+        TitleMusic.playLoop();
         if (Greenfoot.isKeyDown("up") &&  opcion!=0) 
         {
             opcion++;
@@ -48,9 +51,11 @@ public class Menu extends World
             switch(opcion){
                   case 0:// jugar
                        Greenfoot.setWorld(new MyWorld());
+                       TitleMusic.pause();
                        break;
                   case 1:// salir
                        Greenfoot.stop();
+                       TitleMusic.pause();
                        break;
             }        
         }    

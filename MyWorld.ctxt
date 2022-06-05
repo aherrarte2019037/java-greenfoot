@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #BlueJ class context
 comment0.target=MyWorld
 comment0.text=\r\n\ Write\ a\ description\ of\ class\ MyWorld\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
@@ -17,3 +18,28 @@ comment6.target=void\ crearGhostAlien(int)
 comment7.params=numero
 comment7.target=void\ crearGalloAlien(int)
 numComments=8
+=======
+#BlueJ class context
+comment0.target=MyWorld
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ MyWorld\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=MyWorld()
+comment2.params=
+comment2.target=void\ prepare()
+comment2.text=\r\n\ Prepare\ the\ world\ for\ the\ start\ of\ the\ program.\r\n\ That\ is\:\ create\ the\ initial\ objects\ and\ add\ them\ to\ the\ world.\r\n
+comment3.params=numero
+comment3.target=void\ crearNormalAliens(int)
+comment4.params=numero
+comment4.target=void\ crearKamikazeAlien(int)
+comment5.params=numero
+comment5.target=void\ crearInverterAlien(int)
+comment6.params=numero
+comment6.target=void\ crearGhostAlien(int)
+comment7.params=numero
+comment7.target=void\ crearGalloAlien(int)
+comment8.params=
+comment8.target=void\ stopMusic()
+comment9.params=
+comment9.target=void\ playBossTheme()
+numComments=10
+>>>>>>> 01ffab0e6249382529c0b2d0a855041e3f535944
