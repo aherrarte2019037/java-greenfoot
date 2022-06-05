@@ -8,11 +8,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MyWorld extends World
 {
-
-    /**
-     * Constructor for objects of class MyWorld.
-     * 
-     */
+    int enemies_killed = 0;
+    
+    
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -22,7 +20,6 @@ public class MyWorld extends World
         crearNormalAliens(5);
         crearKamikazeAlien(3);
         crearInverterAlien(2);
-        crearGhostAlien(1);
         crearGalloAlien(1);
     }
     
