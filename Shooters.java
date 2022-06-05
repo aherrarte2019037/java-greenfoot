@@ -94,9 +94,6 @@ public class Shooters extends Actor
         }
         return angles;
     }
-    public void receiveDamage(int damage){
-        HP -= damage; 
-    }
     public void rotate(int angle){
         setRotation(angle);
     }

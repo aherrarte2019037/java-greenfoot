@@ -8,18 +8,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MyWorld extends World
 {
-<<<<<<< HEAD
     int enemies_killed = 0;
+    player player = new player(90);
+    HPBar playerHP = new HPBar(this.player);
     
-    
-=======
-    /**
-     * Constructor for objects of class MyWorld.
-     * 
-     */
     GreenfootSound GameMusic = new GreenfootSound("Quetzal 1 OST - Phase 1.mp3");
     GreenfootSound BossMusic = new GreenfootSound("Quetzal 1 OST - Boss Theme.mp3");
->>>>>>> 01ffab0e6249382529c0b2d0a855041e3f535944
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -39,13 +33,13 @@ public class MyWorld extends World
      */
     private void prepare()
     {
-        player player = new player(100);
         addObject(player,394,550);
+        addObject(playerHP,600,600);
     }
     
     private void crearNormalAliens(int numero){ //Generar normal Alien
         for(int i=0;i<numero;i++){
-            normalAlien nA=new normalAlien(100);
+            normalAlien nA=new normalAlien(100, this.player);
             int x= Greenfoot.getRandomNumber(getWidth());
             int y=20;
             addObject(nA,x,y);
@@ -54,7 +48,7 @@ public class MyWorld extends World
     
     private void crearKamikazeAlien(int numero){ //generar kamikaze Alien
         for(int i=0;i<numero;i++){
-            kamikazeAlieen kA=new kamikazeAlieen(100);
+            kamikazeAlieen kA=new kamikazeAlieen(100,this.player);
             int x= Greenfoot.getRandomNumber(getWidth());
             int y=5;
             addObject(kA,x,y); 
@@ -63,7 +57,7 @@ public class MyWorld extends World
     
     private void crearInverterAlien(int numero){ //generar inverter Alien
         for(int i=0;i<numero;i++){
-            inverterAlien iA=new inverterAlien(100);
+            inverterAlien iA=new inverterAlien(100,this.player);
             int x= Greenfoot.getRandomNumber(getWidth());
             int y=10;
             addObject(iA,x,y);   
@@ -73,7 +67,7 @@ public class MyWorld extends World
     
     private void crearGhostAlien(int numero){ //generar ghost Alien
         for(int i=0;i<numero;i++){
-            ghostAlien gA=new ghostAlien(100);
+            ghostAlien gA=new ghostAlien(100,this.player);
             int x= Greenfoot.getRandomNumber(getWidth());
             int y=5;
             addObject(gA,x,y); 
@@ -83,7 +77,7 @@ public class MyWorld extends World
     
     private void crearGalloAlien(int numero){ //generar gallo Alien
         for(int i=0;i<numero;i++){
-            galloAlien galloA=new galloAlien(100);
+            galloAlien galloA=new galloAlien(100,this.player);
             int x= Greenfoot.getRandomNumber(getWidth());
             int y=5;
             addObject(galloA,x,y);

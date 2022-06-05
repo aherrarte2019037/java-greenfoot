@@ -1,8 +1,8 @@
 #BlueJ class context
 comment0.target=normalAlien
 comment0.text=\r\n\ Write\ a\ description\ of\ class\ normalAlien\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
-comment1.params=HP
-comment1.target=normalAlien(int)
+comment1.params=HP\ main_player
+comment1.target=normalAlien(int,\ player)
 comment2.params=
 comment2.target=void\ posicionInicial()
 comment3.params=

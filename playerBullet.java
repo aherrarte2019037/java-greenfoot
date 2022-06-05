@@ -18,14 +18,10 @@ public class playerBullet extends Bullet
     public void act()
     {
         fly();
-        hurt();
+        dissapear();
     }
-    public void hurt(){
-        Actor Shooter;
-        Shooter = getOneObjectAtOffset(0,0, enemy.class);
-        if (Shooter != null || isAtEdge() == true){
-            World world = getWorld();
-            world.removeObject(Shooter);
+    public void dissapear(){
+        if (isAtEdge() == true){
             getWorld().removeObject(this);
         }
     }
